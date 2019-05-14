@@ -90,13 +90,13 @@ main {
   grid-row-start: 4;
   grid-row-end: 5;
   text-align: right;
-  padding: 0 20px;
+  padding: 0 25px;
 }
 .right-column .copy-paragraph {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
   text-align: left;
 }
 .right-column .copy-paragraph .paragraph {
@@ -111,9 +111,10 @@ main {
   background-color: #ffffff;
   border: none;
   border-radius: 19px;
+  cursor: pointer;
 }
 .right-column h3 {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 body {
@@ -128,20 +129,23 @@ h2 {
   font-family: "Chivo", sans-serif;
   font-weight: 700;
   font-size: 20px;
+  letter-spacing: 0.5px;
 }
 
 .paragraph {
-  letter-spacing: 0.8px;
+  letter-spacing: 0.4px;
 }
 
 .beautiful {
   font-family: "Chivo";
   font-weight: 100;
+  letter-spacing: 0px;
 }
 
 .useful {
   font-family: "Chivo";
   font-weight: 800;
+  letter-spacing: 0.7px;
 }
 
 button {
@@ -150,6 +154,7 @@ button {
   color: #4232f2;
   font-size: 14px;
   padding: 30px 0 25px 0;
+  letter-spacing: 0.5px;
 }
 
 H3 a {

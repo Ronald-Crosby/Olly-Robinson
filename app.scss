@@ -38,13 +38,13 @@ main {
     grid-row-start: 4;
     grid-row-end: 5;
     text-align: right;  
-    padding: 0 20px;
+    padding: 0 25px;
 
     .copy-paragraph {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 35px;
+        margin-bottom: 40px;
         text-align: left;
            
         
@@ -63,10 +63,11 @@ main {
         background-color: #ffffff;      
         border: none;  
         border-radius: 19px;
+        cursor: pointer;
     }
 
     h3 {
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
 }
