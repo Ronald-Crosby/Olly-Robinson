@@ -1,0 +1,34 @@
+@media (max-width: 960px) {
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;        
+    }
+
+    .left-column {
+        margin-top: 5em;
+        margin-bottom: 5em;
+        max-width: auto;
+
+        H1 img {
+            width: 300px;
+        }
+    }
+
+    .right-column {
+        margin-top: 5em;
+        margin-bottom: 5em;
+        max-width: auto;
+
+        .download-button {
+            width: 300px;
+        }
+
+        .copy-paragraph {
+            text-align: right;
+        }
+    }
+
+}
