@@ -344,6 +344,8 @@ body {
   background-image: url("Design/CV Site Faded Background 02.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  overflow-y: hidden;
 }
 
 main {
@@ -489,7 +491,7 @@ H3 a {
     width: 300px;
   }
   .right-column .copy-paragraph {
-    text-align: left;
+    text-align: right;
   }
 }
 
