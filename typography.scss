@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Asul|Chivo:300,400,700,900');
+
+body {
+    font-family: "Asul", serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #ffffff;
+    font-size: 14px;    
+}
+
+h2 {
+    font-family: "Chivo", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.paragraph {
+    letter-spacing: 0.8px;
+}
+
+.beautiful {
+    font-family: "Chivo";
+    font-weight: 100;
+}
+
+.useful {
+    font-family: "Chivo";
+    font-weight: 800;
+}
+
+button {
+    font-family: "Asul"; 
+    font-weight: 700;
+    color: #4232f2;
+    font-size: 14px;
+    padding: 30px 0 25px 0;
+}
+
+H3 a {
+    font-family: "Chivo";
+    text-decoration: none;
+    color: #ffffff;
+}

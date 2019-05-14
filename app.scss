@@ -1,0 +1,72 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-image: url("Design/CV Site Faded Background 02.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 0.8fr 450px 450px 1fr;
+    grid-template-rows: 20% auto 5% auto 30%;
+    grid-gap: 30px;
+}
+
+.left-column {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: right;
+
+    h1 img {
+        width: 450px;
+    }
+
+    h1 {
+        margin-bottom: 10px;
+    }    
+}
+
+
+.right-column {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    text-align: right;  
+    padding: 0 20px;
+
+    .copy-paragraph {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 35px;
+        text-align: left;
+           
+        
+        .paragraph {
+            padding-right: 40px;
+        }
+
+        img {
+            height: 50px;
+        }
+    }
+
+    form button {
+        width: 100%;
+        height: auto;
+        background-color: #ffffff;      
+        border: none;  
+        border-radius: 19px;
+    }
+
+    h3 {
+        margin-top: 20px;
+    }
+
+}

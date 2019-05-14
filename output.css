@@ -1,0 +1,161 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Asul|Chivo:300,400,700,900");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-image: url("Design/CV Site Faded Background 02.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+main {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 0.8fr 450px 450px 1fr;
+  grid-template-rows: 20% auto 5% auto 30%;
+  grid-gap: 30px;
+}
+
+.left-column {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  text-align: right;
+}
+.left-column h1 img {
+  width: 450px;
+}
+.left-column h1 {
+  margin-bottom: 10px;
+}
+
+.right-column {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  text-align: right;
+  padding: 0 20px;
+}
+.right-column .copy-paragraph {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+  text-align: left;
+}
+.right-column .copy-paragraph .paragraph {
+  padding-right: 40px;
+}
+.right-column .copy-paragraph img {
+  height: 50px;
+}
+.right-column form button {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 19px;
+}
+.right-column h3 {
+  margin-top: 20px;
+}
+
+body {
+  font-family: "Asul", serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+h2 {
+  font-family: "Chivo", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.paragraph {
+  letter-spacing: 0.8px;
+}
+
+.beautiful {
+  font-family: "Chivo";
+  font-weight: 100;
+}
+
+.useful {
+  font-family: "Chivo";
+  font-weight: 800;
+}
+
+button {
+  font-family: "Asul";
+  font-weight: 700;
+  color: #4232f2;
+  font-size: 14px;
+  padding: 30px 0 25px 0;
+}
+
+H3 a {
+  font-family: "Chivo";
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=output.css.map */

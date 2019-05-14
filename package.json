@@ -1,0 +1,19 @@
+{
+  "name": "cv-site",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ronald-Crosby/Olly-Robinson.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ronald-Crosby/Olly-Robinson/issues"
+  },
+  "homepage": "https://github.com/Ronald-Crosby/Olly-Robinson#readme",
+  "description": ""
+}
