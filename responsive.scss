@@ -4,21 +4,19 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;        
+        align-items: center; 
+        overflow: hidden;       
     }
 
-    .left-column {
-        margin-top: 5em;        
-        max-width: auto;
+    .left-column {               
+        max-width: auto !important;
 
         H1 img {
             width: 300px;
         }
     }
 
-    .right-column {
-        margin-top: 5em;
-        margin-bottom: 5em;
+    .right-column {        
         width: auto !important;
         padding: 36px;
 
@@ -36,6 +34,7 @@
             width: 80%;
             padding-right: 15px !important;
         }
+
     }
 
 }

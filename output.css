@@ -477,19 +477,17 @@ H3 a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
   }
 
   .left-column {
-    margin-top: 5em;
-    max-width: auto;
+    max-width: auto !important;
   }
   .left-column H1 img {
     width: 300px;
   }
 
   .right-column {
-    margin-top: 5em;
-    margin-bottom: 5em;
     width: auto !important;
     padding: 36px;
   }
