@@ -452,13 +452,16 @@ h2 {
 }
 
 button {
+  padding: 30px 0 25px 0;
+}
+button a {
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
   font-family: "Asul";
   font-weight: 700;
   color: #4232f2;
   font-size: 14px;
-  padding: 30px 0 25px 0;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
 }
 
 H3 a {
