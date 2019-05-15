@@ -399,7 +399,7 @@ main {
   border: none;
   outline: none;
   position: absolute;
-  right: 2px;
+  right: 3px;
   transform: translateY(-5px);
 }
 .right-column .copy-paragraph button:focus {
@@ -409,9 +409,10 @@ main {
   height: 20px;
   cursor: pointer;
 }
-.right-column form button {
+.right-column .download-button {
+  display: block;
   width: 100%;
-  height: auto;
+  text-align: center;
   background-color: #ffffff;
   border: none;
   border-radius: 19px;
@@ -452,10 +453,8 @@ h2 {
   letter-spacing: 0.7px;
 }
 
-button {
+.download-button {
   padding: 30px 0 25px 0;
-}
-button a {
   letter-spacing: 0.5px;
   text-transform: uppercase;
   text-decoration: none;

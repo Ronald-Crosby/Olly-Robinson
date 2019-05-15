@@ -78,13 +78,15 @@ main {
         }
     }
 
-    form button {        
+    .download-button {        
+        display: block;
         width: 100%;
-        height: auto;
+        text-align: center;
         background-color: #ffffff;      
         border: none;  
         border-radius: 19px;
-        cursor: pointer;        
+        cursor: pointer;
+
     }
 
     h3 {
