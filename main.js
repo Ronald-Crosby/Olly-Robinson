@@ -27,3 +27,7 @@ nextButton.addEventListener("click", function() {
     next()    
 })
 
+paragraphTag.addEventListener("click", function() {
+    next()
+})
+

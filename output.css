@@ -353,6 +353,8 @@ main {
   grid-template-columns: 0.8fr auto auto 1fr;
   grid-template-rows: 1fr 2fr 2fr 1fr;
   grid-gap: 15px;
+  height: 100vh;
+  width: 100vw;
 }
 
 .left-column {
@@ -390,6 +392,7 @@ main {
 .right-column .copy-paragraph .js-paragraph {
   padding-right: 40px;
   height: 66px;
+  cursor: pointer;
 }
 .right-column .copy-paragraph button {
   background-color: rgba(0, 0, 0, 0);
