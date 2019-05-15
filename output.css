@@ -399,13 +399,14 @@ main {
   border: none;
   outline: none;
   position: absolute;
-  right: 0;
+  right: 2px;
+  transform: translateY(-5px);
 }
 .right-column .copy-paragraph button:focus {
   outline: none !important;
 }
 .right-column .copy-paragraph img {
-  height: 50px;
+  height: 20px;
   cursor: pointer;
 }
 .right-column form button {
