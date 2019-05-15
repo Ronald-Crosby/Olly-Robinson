@@ -1,4 +1,4 @@
-@media (max-width: 960px) {
+@media (max-width: 700px) {
 
     main {
         display: flex;
@@ -8,8 +8,7 @@
     }
 
     .left-column {
-        margin-top: 5em;
-        margin-bottom: 5em;
+        margin-top: 5em;        
         max-width: auto;
 
         H1 img {
@@ -20,7 +19,8 @@
     .right-column {
         margin-top: 5em;
         margin-bottom: 5em;
-        max-width: auto;
+        width: auto !important;
+        padding: 36px;
 
         .download-button {
             width: 300px;
@@ -28,6 +28,13 @@
 
         .copy-paragraph {
             text-align: right;
+            height: auto;      
+            justify-content: center;      
+        }
+
+        .paragraph-tag {           
+            width: 80%;
+            padding-right: 10px !important;
         }
     }
 
