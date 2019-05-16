@@ -497,7 +497,10 @@ H3 a {
   .right-column .copy-paragraph {
     text-align: right;
     height: auto;
-    justify-content: center;
+    justify-content: flex-end;
+  }
+  .right-column .copy-paragraph button {
+    display: none;
   }
   .right-column .paragraph-tag {
     width: 80%;

@@ -27,7 +27,11 @@
         .copy-paragraph {
             text-align: right;
             height: auto;      
-            justify-content: center;      
+            justify-content: flex-end;      
+            
+            button {
+                display: none;
+            }
         }
 
         .paragraph-tag {           
