@@ -1,20 +1,12 @@
 body {
-    height: 100vh;
-    width: 100vw;
-    background-image: url("../../Design/CV Site Faded Background 02.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    overflow-y: hidden;
+    background: linear-gradient(to top left, #4233f2, #7244a7);
 }
 
 main {
     display: grid;
-    grid-template-columns: 0.8fr auto auto 1fr;
-    grid-template-rows: 1fr 2fr 2fr 1fr;
+    grid-template-columns: 1fr auto auto 1fr;
+    grid-template-rows: 33fr 100fr 150fr 0fr 250fr;
     grid-gap: 15px;
-    height: 100vh;
-    width: 100vw;
 }
 
 .left-column {
@@ -23,17 +15,16 @@ main {
     grid-row-start: 2;
     grid-row-end: 3;
     text-align: right;
-    max-width: 450px;
+    max-width: 650px;
 
     h1 img {
-        width: 450px;
+        max-width: 500px;
     }
 
     h1 {
         margin-bottom: 10px;
     }
 }
-
 
 .right-column {
     grid-column-start: 3;
@@ -42,55 +33,131 @@ main {
     grid-row-end: 4;
     text-align: right;
     padding: 0 25px;
-    width: 400px;
+    max-width: 600px;
+    padding-right: 15%;
 
     .copy-paragraph {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
         text-align: left;
         position: relative;
-
-
-        .paragraph-tag {
-            padding-right: 40px;
-            height: 66px;
-            cursor: pointer;
-        }
-
-        button {
-            background-color: rgba($color: #000000, $alpha: 0);
-            border: none;
-            outline: none;
-            position: absolute;
-            right: 0;
-            transform: translateY(-5px);
-        }
-
-        button:focus {
-            outline: none !important;
-        }
-
-        img {
-            height: 20px;
-            cursor: pointer;
-        }
     }
 
     .download-button {
         display: block;
-        width: 100%;
+        width: 75%;
         text-align: center;
-        background-color: #ffffff;
-        border: none;
+        margin-left: auto;
+        background-color:rgba(255, 255, 255, 1);
+        border: 2px solid rgba(255, 255, 255, 0);
         border-radius: 19px;
         cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .download-button:hover {
+        border: 2px solid rgba(255, 255, 255, 0.9);
+        background-color: rgba(255, 255, 255, 0);
+        color: #fff; 
     }
 
     .email {
         display: block;
         padding-top: 30px;
+        color: rgba(255, 255, 255, 1);
+        transition: color 0.1s ease;
     }
 
+    .email:hover {
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+}
+
+.section-previous-work {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 5;
+}
+
+.gallery-container {
+    width: 100%;
+    display: flex;
+}
+
+.gallery-item-shell {
+    width: 33.333333333%;
+    margin: 24px 14px;
+}
+
+.gallery-item-shell:first-child {
+    margin-left: 0;
+}
+
+.gallery-item-shell:last-child {
+    margin-right: 0;
+}
+
+.gallery-item {
+    width: 100%;
+    position: relative;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+}
+
+.gallery-image-ratio-box {
+    height: 0;
+    padding-top: 150%;
+    position: relative;
+    z-index: 1;
+}
+
+.gallery-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.item-text {
+    background: linear-gradient(to top left, rgba(66, 51, 242, 0.75), rgba(114, 68, 167, 0.75));
+    color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.25s ease;
+
+    h3 {
+        margin: 0;
+        padding: 0 4px;
+        text-align: center;
+    }
+
+    .gallery-subtitle {
+        margin-top: 4px;
+        opacity: 0.75;
+    }
+}
+
+.gallery-item:hover .item-text {
+    opacity: 1;
 }

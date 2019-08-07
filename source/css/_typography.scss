@@ -11,24 +11,21 @@ body {
 h2 {
     font-family: "Chivo", sans-serif;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 24px;
     letter-spacing: 0.5px;
 }
 
-.paragraph {
+h3 {
+    font-family: "Chivo", sans-serif;
+    font-weight: 200;
+    font-size: 36px;
+    letter-spacing: 0.35px;
+    line-height: 1.25;
+}
+
+.paragraph-tag {
     letter-spacing: 0.4px;
-}
-
-.beautiful {
-    font-family: "Chivo";
-    font-weight: 100;
-    letter-spacing: 0px;
-}
-
-.useful {
-    font-family: "Chivo";
-    font-weight: 800;
-    letter-spacing: 0.7px;
+    font-size: 16px;
 }
 
 .download-button {
@@ -48,3 +45,4 @@ h2 {
     color: #ffffff;
     font-size: 14px;
 }
+

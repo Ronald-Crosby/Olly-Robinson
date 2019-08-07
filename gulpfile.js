@@ -1,6 +1,6 @@
 'use strict'
 
-const { src, dest, watch, parallel, series } = require('gulp')
+const { src, dest, watch, series } = require('gulp')
 const gulp = require('gulp')
 const sass = require('gulp-sass');
 const rename = require('gulp-rename')
@@ -36,11 +36,11 @@ function watchFiles() {
         }
     })
     watch(['./source/css/*.scss'], css)
-    // watch('./**/*.html').on('change', browserSync.reload)
-    // watch('./source/js/*.js').on('change', js, browserSync.reload)
+    watch('*.html').on('change', browserSync.reload)
+    watch('./source/js/*.js').on('change', js, browserSync.reload)
 }
 
 exports.css = css
 exports.js = js
 exports.watchFiles = watchFiles
-exports.default = series(parallel(css, js), watchFiles)
+exports.default = series(css, watchFiles)
