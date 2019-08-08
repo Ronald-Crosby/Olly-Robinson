@@ -1,33 +1,42 @@
-let paraNumber = 0
+const galleryItems = document.querySelectorAll('.gallery-item-shell')
+const modal = document.querySelector(".modal")
+const modalImage = document.querySelector(".modal-content")
+const modalClose = document.querySelector(".modal-close")
+const bodyTag = document.querySelector('.js-body')
 
-const sentences = [
-    { copy: `I am a self-taught junior web developer looking for the opportunity to build <span class="useful">useful</span>, <span class="beautiful">beautiful</span> web products fit for the future.`},
-    { copy: "I am looking for my first front-end developer job this spring." },
-    { copy: "I used to work in events management but now I build websites!" },
-]
+galleryItems.forEach(image => {
+    image.addEventListener('click', function() {
+        modal.style.display = 'block'
+        event.preventDefault()
 
-const nextButton = document.querySelector(".js-and-sign")
-const paragraphTag = document.querySelector(".js-paragraph")
+        let galleryItem = this.querySelector('.gallery-item')
+        let ratioBox = galleryItem.querySelector('.gallery-image-ratio-box')
+        let imgTag = ratioBox.querySelector('img')
+        imgSrc = imgTag.getAttribute('src')
 
-const updateTag = function () {
-    paragraphTag.innerHTML = sentences[paraNumber].copy
-}
+        console.log(imgSrc)
 
-const next = function() {
-    paraNumber = paraNumber + 1
+        bodyTag.style.overflow = 'hidden'
 
-    if(paraNumber > sentences.length - 1) {
-        paraNumber = 0
-    } 
-    updateTag()    
-    console.log(paraNumber)
-}
-
-nextButton.addEventListener("click", function() {
-    next()    
+        modalImage.innerHTML = `<img src="${imgSrc}">`
+    })
 })
 
-paragraphTag.addEventListener("click", function() {
-    next()
+modalClose.addEventListener("click", function() {
+    modal.style.display = "none"
+    bodyTag.style.overflow = 'visible'
 })
+
+modal.addEventListener("click", function() {
+    modal.style.display = "none"
+    bodyTag.style.overflow = "visible"
+})
+
+document.onkeydown = function(e) {
+    e = e || window.event;
+    if (e.keyCode == 27) {
+        modal.style.display = "none"
+        bodyTag.style.overflow = "visible"
+    }
+}
 

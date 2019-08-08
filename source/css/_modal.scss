@@ -1,0 +1,33 @@
+.modal {
+    display: none;
+    z-index: 5;
+    position: relative;
+}
+
+.modal-background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.modal-close {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 24px;
+    cursor: pointer;
+}
+
+.modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: gray;
+    overflow-y: scroll;
+    max-height: 100vh;
+    max-width: 80%;
+}
