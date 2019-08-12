@@ -16,27 +16,26 @@ galleryItems.forEach(image => {
 
         console.log(imgSrc)
 
-        bodyTag.style.overflow = 'hidden'
-
         modalImage.innerHTML = `<img src="${imgSrc}">`
     })
 })
 
 modalClose.addEventListener("click", function() {
-    modal.style.display = "none"
-    bodyTag.style.overflow = 'visible'
+    closeModal()
 })
 
 modal.addEventListener("click", function() {
-    modal.style.display = "none"
-    bodyTag.style.overflow = "visible"
+    closeModal()
 })
 
 document.onkeydown = function(e) {
     e = e || window.event;
     if (e.keyCode == 27) {
-        modal.style.display = "none"
-        bodyTag.style.overflow = "visible"
+        closeModal()
     }
+}
+
+function closeModal() {
+    modal.style.display = "none"
 }
 
