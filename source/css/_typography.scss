@@ -1,17 +1,60 @@
 @import url('https://fonts.googleapis.com/css?family=Asul|Chivo:300,400,700,900');
 
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 1000px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
 body {
     font-family: "Asul", serif;
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 1.65;
     color: #ffffff;
-    font-size: 14px;
+    font-size: 18px;
+
+    @media(max-width:#{$screen-lg-min}) {
+        font-size: 16px;
+    }
+
+}
+
+.stroke {
+    font-family: "Chivo", sans-serif;
+    font-size: 110px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.05;
+    -webkit-text-stroke: 3px #ffffff;
+    -webkit-text-fill-color: transparent;
+
+    @media(max-width:#{$screen-xl-min}) {
+        font-size: 90px;
+    }
+
+    @media(max-width:#{$screen-lg-min}) {
+        font-size: 80px;
+    }
+}
+
+.h1-svg {
+    display: inline-block;
+    width: 450px;
+    height: 200px;
+    vertical-align: top;
 }
 
 h2 {
     font-family: "Chivo", sans-serif;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 28px;
     letter-spacing: 0.5px;
 }
 
@@ -24,8 +67,7 @@ h3 {
 }
 
 .paragraph-tag {
-    letter-spacing: 0.4px;
-    font-size: 16px;
+    letter-spacing: 0.5px;
 }
 
 .download-button {

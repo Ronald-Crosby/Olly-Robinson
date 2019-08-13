@@ -1,12 +1,56 @@
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 930px;
+
+// Tablets and small desktops
+$screen-lg-min: 1000px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// @-webkit-keyframes gradient {
+//     0%{background-position:4% 0%}
+//     50%{background-position:97% 100%}
+//     100%{background-position:4% 0%}
+// }
+// @-moz-keyframes gradient {
+//     0%{background-position:4% 0%}
+//     50%{background-position:97% 100%}
+//     100%{background-position:4% 0%}
+// }
+// @keyframes gradient {
+//     0%{background-position:4% 0%}
+//     50%{background-position:97% 100%}
+//     100%{background-position:4% 0%}
+// }
+
 body {
-    background: linear-gradient(to top left, #4233f2, #7244a7);
+    background: linear-gradient(to top left, #4233f2, 40%, #7244a7);
+    // background-size: 400% 400%;
+
+    // -webkit-animation: gradient 14s ease infinite;
+    // -moz-animation: gradient 14s ease infinite;
+    // animation: gradient 14s ease infinite;
 }
 
 main {
     display: grid;
     grid-template-columns: 1fr auto auto 1fr;
-    grid-template-rows: 33fr 100fr 125fr 0fr 240fr;
-    grid-gap: 15px;
+    grid-template-rows: 25fr 90fr 90fr 0fr 260fr;
+    grid-gap: 20px;
+
+    @media(max-width:#{$screen-md-min}) {
+        display: block;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    @media(max-width:#{$screen-sm-min}) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 .left-column {
@@ -15,14 +59,15 @@ main {
     grid-row-start: 2;
     grid-row-end: 3;
     text-align: right;
-    max-width: 650px;
-
-    h1 img {
-        max-width: 500px;
-    }
+    max-width: 600px;
 
     h1 {
-        margin-bottom: 10px;
+        margin-bottom: 30px;
+    }
+
+    @media(max-width:#{$screen-md-min}) {
+        text-align: center;
+        margin: 80px auto 50px auto;
     }
 }
 
@@ -34,7 +79,14 @@ main {
     text-align: right;
     padding: 0 25px;
     max-width: 600px;
-    padding-right: 15%;
+    min-width: 450px;
+
+    @media(max-width:#{$screen-md-min}) {
+        text-align: center;
+        margin: 60px auto 100px auto;
+        padding: 0;
+
+    }
 
     .copy-paragraph {
         display: flex;
@@ -43,11 +95,17 @@ main {
         margin-bottom: 30px;
         text-align: left;
         position: relative;
+
+        @media(max-width:#{$screen-md-min}) {
+            max-width: 500px;
+            text-align: left;
+            margin: 0 auto 20px auto;
+        }
     }
 
     .download-button {
         display: block;
-        width: 75%;
+        width: 65%;
         text-align: center;
         margin-left: auto;
         background-color:rgba(255, 255, 255, 1);
@@ -55,12 +113,26 @@ main {
         border-radius: 19px;
         cursor: pointer;
         transition: all 0.2s ease;
+
+        @media(max-width: #{$screen-lg-min}) {
+            width: 75%;
+        }
+
+        @media(max-width:#{$screen-md-min}) {
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        @media(max-width:#{$screen-sm-min}) {
+            width: 70%;
+        }
+
     }
 
     .download-button:hover {
         border: 2px solid rgba(255, 255, 255, 0.9);
         background-color: rgba(255, 255, 255, 0);
-        color: #fff; 
+        color: #fff;
     }
 
     .email {
@@ -68,12 +140,16 @@ main {
         padding-top: 30px;
         color: rgba(255, 255, 255, 1);
         transition: color 0.1s ease;
+        text-align: right;
+
+        @media(max-width:#{$screen-md-min}) {
+            text-align: center;
+        }
     }
 
     .email:hover {
         color: rgba(255, 255, 255, 0.7);
     }
-
 }
 
 .section-previous-work {
@@ -83,24 +159,38 @@ main {
     grid-row-end: 5;
 }
 
+.header-previous-work {
+    text-align: center;
+}
+
 .gallery-container {
-    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     z-index: 2;
+    padding-bottom: 80px;
+    margin: 0 -12px;
 }
 
 .gallery-item-shell {
     width: 33.333333333%;
-    margin: 24px 14px;
+    padding: 24px 14px;
+
+    @media(max-width: #{$screen-md-min}) {
+        width: 50%;
+    }
+
+    @media(max-width: #{$screen-sm-min}) {
+        width: 100%;
+    }
 }
 
-.gallery-item-shell:first-child {
-    margin-left: 0;
-}
+// .gallery-item-shell:first-child {
+//     margin-left: 0;
+// }
 
-.gallery-item-shell:last-child {
-    margin-right: 0;
-}
+// .gallery-item-shell:last-child {
+//     margin-right: 0;
+// }
 
 .gallery-item {
     width: 100%;

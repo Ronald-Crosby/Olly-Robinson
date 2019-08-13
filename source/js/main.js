@@ -16,7 +16,7 @@ galleryItems.forEach(image => {
 
         console.log(imgSrc)
 
-        modalImage.innerHTML = `<img src="${imgSrc}">`
+        modalImage.innerHTML = `<img src="${imgSrc}" style="object-fit:cover; width:100%;">`
     })
 })
 
