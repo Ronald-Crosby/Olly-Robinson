@@ -73,6 +73,10 @@ h3 {
     font-size: 36px;
     letter-spacing: 0.35px;
     line-height: 1.25;
+
+    @media(max-width: #{$screen-sm-min}) {
+        font-size: 24px;
+    }
 }
 
 .paragraph-tag {

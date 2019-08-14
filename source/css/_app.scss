@@ -19,7 +19,7 @@ body {
     z-index: 1;
     display: grid;
     grid-template-columns: 1fr auto auto 1fr;
-    grid-template-rows: 25fr 90fr 90fr 0fr 260fr;
+    grid-template-rows: 0 50vh 50vh 0fr 260fr;
     grid-gap: 20px;
 
     opacity: 0;
@@ -51,7 +51,7 @@ body {
 
     @media(max-width:#{$screen-md-min}) {
         text-align: center;
-        margin: 80px auto 50px auto;
+        margin: 40px auto 50px auto;
     }
 }
 
@@ -120,6 +120,12 @@ body {
         border: 2px solid rgba(255, 255, 255, 0.9);
         background-color: rgba(255, 255, 255, 0);
         color: #fff;
+
+        @media(max-width: #{$screen-md-min}) {
+            background-color:rgba(255, 255, 255, 1);
+            border: 2px solid rgba(255, 255, 255, 0);
+            color: #4233f2;
+        }
     }
 
     .email {
@@ -131,6 +137,7 @@ body {
 
         @media(max-width:#{$screen-md-min}) {
             text-align: center;
+            padding-top: 15px;
         }
     }
 
@@ -184,6 +191,10 @@ body {
     position: relative;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.35);
     cursor: pointer;
+
+    @media(max-width: #{$screen-sm-min}) {
+        box-shadow: none;
+    }
 }
 
 .gallery-image-ratio-box {
@@ -234,6 +245,13 @@ body {
         margin-top: 4px;
         opacity: 0.75;
     }
+
+    @media(max-width: #{$screen-sm-min}) {
+        position: static;
+        opacity: 1;
+        background: transparent;
+    }
+
 }
 
 .gallery-item:hover .item-text {
