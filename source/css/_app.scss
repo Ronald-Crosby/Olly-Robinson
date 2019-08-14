@@ -10,36 +10,20 @@ $screen-lg-min: 1000px;
 // Large tablets and desktops
 $screen-xl-min: 1200px;
 
-// @-webkit-keyframes gradient {
-//     0%{background-position:4% 0%}
-//     50%{background-position:97% 100%}
-//     100%{background-position:4% 0%}
-// }
-// @-moz-keyframes gradient {
-//     0%{background-position:4% 0%}
-//     50%{background-position:97% 100%}
-//     100%{background-position:4% 0%}
-// }
-// @keyframes gradient {
-//     0%{background-position:4% 0%}
-//     50%{background-position:97% 100%}
-//     100%{background-position:4% 0%}
-// }
 
 body {
     background: linear-gradient(to top left, #4233f2, 40%, #7244a7);
-    // background-size: 400% 400%;
-
-    // -webkit-animation: gradient 14s ease infinite;
-    // -moz-animation: gradient 14s ease infinite;
-    // animation: gradient 14s ease infinite;
 }
 
-main {
+.grid-container {
+    z-index: 1;
     display: grid;
     grid-template-columns: 1fr auto auto 1fr;
     grid-template-rows: 25fr 90fr 90fr 0fr 260fr;
     grid-gap: 20px;
+
+    opacity: 0;
+    transition: opacity 0.5s;
 
     @media(max-width:#{$screen-md-min}) {
         display: block;
@@ -85,7 +69,10 @@ main {
         text-align: center;
         margin: 60px auto 100px auto;
         padding: 0;
+    }
 
+    @media(max-width:#{$screen-sm-min}) {
+        min-width: 0;
     }
 
     .copy-paragraph {
@@ -124,7 +111,7 @@ main {
         }
 
         @media(max-width:#{$screen-sm-min}) {
-            width: 70%;
+            width: 80%;
         }
 
     }

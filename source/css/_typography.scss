@@ -42,6 +42,11 @@ body {
     @media(max-width:#{$screen-lg-min}) {
         font-size: 80px;
     }
+
+    @media(max-width:#{$screen-sm-min}) {
+        font-size: 50px;
+        -webkit-text-stroke: 2px #ffffff;
+    }
 }
 
 .h1-svg {
@@ -56,6 +61,10 @@ h2 {
     font-weight: 700;
     font-size: 28px;
     letter-spacing: 0.5px;
+
+    @media(max-width:#{$screen-sm-min}) {
+        font-size: 20px;
+    }
 }
 
 h3 {

@@ -1,0 +1,26 @@
+@keyframes loader {
+    0% {transform: translateY(0)}
+    100% {transform: translateY(-100vh)}
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 1;
+
+    animation-name: loader;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    animation-play-state: paused;
+}

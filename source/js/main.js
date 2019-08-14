@@ -4,6 +4,9 @@ const modalImage = document.querySelector(".modal-content")
 const modalClose = document.querySelector(".modal-close")
 const bodyTag = document.querySelector('.js-body')
 
+    const loader = document.querySelector('.js-loader')
+    const main = document.querySelector('.js-main')
+
 galleryItems.forEach(image => {
     image.addEventListener('click', function() {
         modal.style.display = 'block'
@@ -38,4 +41,12 @@ document.onkeydown = function(e) {
 function closeModal() {
     modal.style.display = "none"
 }
+
+window.addEventListener('load', () => {
+    loader.style.animationPlayState = 'running';
+})
+
+loader.addEventListener('animationend', () => {
+    main.style.opacity = '1';
+})
 
