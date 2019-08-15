@@ -37,13 +37,21 @@
                         I am a junior web developer with experience building modern, responsive websites for a world-class digital agency. I have experience using core languages <strong>HTML, CSS, JavaScript(ES6)</strong> as well as <strong>Tailwind, Gulp, WordPress, Blade and Git.</strong> I am looking for a new role this September. Download my CV here:
                     </p>
                 </div>
-                <a href="Olly Robinson Front-end Dev CV August 2019.pdf" download class="download-button">Download my CV</a>
+                <a href="Olly Robinson Front-end Dev CV August 2019.pdf" download class="download-button"></a>
                 <a href="mailto:ollythedeveloper@gmail.com" class="email">
                     Or send me an email
                 </a>
+
+                <a href="#work" class="down-arrow">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="55px" height="55px" x="0px" y="0px" viewBox="0 0 477.175 477.175" xml:space="preserve">
+                        <g>
+                            <path fill="#ffffff" d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"/>
+                        </g>
+                    </svg>
+                </a>
             </div>
 
-            <section class="section-previous-work">
+            <section class="section-previous-work" id="work">
                 <div class="header-previous-work">
                     <h2>Sites I've worked on</h2>
                 </div>
@@ -51,10 +59,26 @@
                     <div class="gallery-item-shell">
                         <div class="gallery-item">
                             <div class="gallery-image-ratio-box">
-                                <img src="source/img/gallery/crap travel scoreboard.jpg" class="gallery-img" alt="">
+                                <img src="dist/img/crap travel scoreboard.jpg" class="gallery-img" alt="">
                             </div>
                             <div class="item-text">
                                 <h3>Crap Travel<br>Scoreboard</h3>
+                                <p class="item-p">
+                                    I took a deep dive into HTML tables to build a responsive scoreboard and I used percentage widths and heights to make the people scale as the screen size changes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item-shell">
+                        <div class="gallery-item">
+                            <div class="gallery-image-ratio-box">
+                                <img src="dist/img/landtech.test_about.jpg" class="gallery-img" alt="">
+                            </div>
+                            <div class="item-text">
+                                <h3>Landtech</h3>
+                                <p class="item-p">
+                                    I built the About page for this site to a responsive grid using TailwindCSS and used Laravel Blade to componentise the sections for use across the site.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -62,7 +86,7 @@
                         <div class="gallery-item">
                             <div class="gallery-image-ratio-box">
                                 <div class="gallery-img">
-                                    <img src="source/img/gallery/landtech.test_about mobile.jpg" class="gallery-img" alt="">
+                                    <img src="dist/img/landtech.test_about mobile.jpg" class="gallery-img" alt="">
                                 </div>
                             </div>
                             <div class="item-text">
@@ -73,42 +97,54 @@
                     <div class="gallery-item-shell">
                         <div class="gallery-item">
                             <div class="gallery-image-ratio-box">
-                                <img src="source/img/gallery/landtech.test_about.jpg" class="gallery-img" alt="">
-                            </div>
-                            <div class="item-text">
-                                <h3>Landtech</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item-shell">
-                        <div class="gallery-item">
-                            <div class="gallery-image-ratio-box">
-                                <img src="source/img/gallery/lba-olly.test_.jpg" class="gallery-img" alt="">
+                                <img src="dist/img/lba-olly.test_.jpg" class="gallery-img" alt="">
                             </div>
                             <div class="item-text">
                                 <h3>Leeds Bradford Airport<br>Practice Project</h3>
+                                <p class="item-p">
+                                    This was a demo project in which I rebuilt the homepage of the LBA site that Parallax had just completed. I used Gulp build tooling and PostCSS on this project.
+                                </p>
+                                <div class="item-link">
+                                    <a href="" target="_blank" class="item-text-link">View on GitHub</a>
+                                    <div class="GitHub-link-border"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="gallery-item-shell">
                         <div class="gallery-item">
                             <div class="gallery-image-ratio-box">
-                                <img src="source/img/gallery/ronald-crosby.github.io_Present-and-Correct_ (1).jpg" class="gallery-img" alt="">
+                                <img src="dist/img/ronald-crosby.github.io_Present-and-Correct_ (1).jpg" class="gallery-img" alt="">
                             </div>
                             <div class="item-text">
                                 <h3>Present & Correct<br>Practice Project</h3>
+                                <P class="item-p">
+                                    I rebuilt the homepage of one of my favourite online stores as a practice project. I used the dropdown menus as an opportunity to learn more about using JS for DOM manipulation.
+                                </P>
+                                <div class="item-link">
+                                    <a href="https://github.com/Ronald-Crosby/Present-and-Correct" target="_blank" class="item-text-link">View on GitHub</a>
+                                    <div class="GitHub-link-border"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="gallery-item-shell">
                         <div class="gallery-item">
                             <div class="gallery-image-ratio-box">
-                                <img src="source/img/gallery/ronald-crosby.github.io_Present-and-Correct_.jpg" class="gallery-img" alt="">
+                                <img src="dist/img/ronald-crosby.github.io_Present-and-Correct_.jpg" class="gallery-img" alt="">
                             </div>
                             <div class="item-text">
                                 <h3>Present & Correct<br>Mobile<br>Practice Project</h3>
+                                <div class="item-link">
+                                    <a href="https://github.com/Ronald-Crosby/Present-and-Correct" target="_blank" class="item-text-link">View on GitHub</a>
+                                    <div class="GitHub-link-border"></div>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="this-site-repo">
+                        <a href="https://github.com/Ronald-Crosby/Olly-Robinson" target="_blank" class="">View the repository for this site</a>
+                        <div class="this-site-border"></div>
                     </div>
                 </div>
             </section>

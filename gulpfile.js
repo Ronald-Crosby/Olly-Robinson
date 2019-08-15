@@ -29,6 +29,11 @@ function js() {
         .pipe(browserSync.stream())
 }
 
+function img() {
+    return src('./source/img/*')
+        .pipe(dest('./dist/img'))
+}
+
 function watchFiles() {
     browserSync.init({
         server: {
@@ -38,9 +43,11 @@ function watchFiles() {
     watch(['./source/css/*.scss'], css)
     watch('*.html').on('change', browserSync.reload)
     watch('./source/js/*.js').on('change', js, browserSync.reload)
+    watch('./source/img/*').on('change', img)
 }
 
 exports.css = css
 exports.js = js
+exports.img = img
 exports.watchFiles = watchFiles
-exports.default = series(css, watchFiles)
+exports.default = series(css, img, watchFiles)

@@ -10,6 +10,21 @@ $screen-lg-min: 1000px;
 // Large tablets and desktops
 $screen-xl-min: 1200px;
 
+@keyframes arrowFill {
+    0% { fill: rgba(255, 255, 255, 0.9) }
+    100% { fill: rgba(255, 255, 255, 0.4) }
+}
+
+@keyframes arrowBounce {
+    0% { transform: translateX(0); }
+    30% { transform: translateX(-20px); }
+    50% { transform: translateX(0); }
+    70% { transform: translateX(-8px); }
+    94% { transform: translateX(0); }
+    98% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
+}
+
 
 body {
     background: linear-gradient(to top left, #4233f2, 40%, #7244a7);
@@ -63,6 +78,7 @@ body {
 }
 
 .right-column {
+    position: relative;
     grid-column-start: 3;
     grid-column-end: 3;
     grid-row-start: 3;
@@ -96,171 +112,32 @@ body {
             margin: 0 auto 20px auto;
         }
     }
-
-    .download-button {
-        display: block;
-        width: 65%;
-        text-align: center;
-        margin-left: auto;
-        background-color:rgba(255, 255, 255, 1);
-        border: 2px solid rgba(255, 255, 255, 0);
-        border-radius: 19px;
-        cursor: pointer;
-        transition: all 0.2s ease;
-
-        @media(max-width: #{$screen-lg-min}) {
-            width: 75%;
-        }
-
-        @media(max-width:#{$screen-md-min}) {
-            width: 60%;
-            margin: 0 auto;
-        }
-
-        @media(max-width:#{$screen-sm-min}) {
-            width: 80%;
-        }
-
-    }
-
-    .download-button:hover {
-        border: 2px solid rgba(255, 255, 255, 0.9);
-        background-color: rgba(255, 255, 255, 0);
-        color: #fff;
-
-        @media(max-width: #{$screen-md-min}) {
-            background-color:rgba(255, 255, 255, 1);
-            border: 2px solid rgba(255, 255, 255, 0);
-            color: #4233f2;
-        }
-    }
-
-    .email {
-        display: block;
-        padding-top: 30px;
-        color: rgba(255, 255, 255, 1);
-        transition: color 0.1s ease;
-        text-align: right;
-
-        @media(max-width:#{$screen-md-min}) {
-            text-align: center;
-            padding-top: 15px;
-        }
-    }
-
-    .email:hover {
-        color: rgba(255, 255, 255, 0.7);
-    }
 }
 
-.section-previous-work {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 5;
-    grid-row-end: 5;
-}
-
-.header-previous-work {
-    text-align: center;
-}
-
-.gallery-container {
-    display: flex;
-    flex-wrap: wrap;
-    z-index: 2;
-    padding-bottom: 80px;
-    margin: 0 -12px;
-}
-
-.gallery-item-shell {
-    width: 33.333333333%;
-    padding: 24px 14px;
-
-    @media(max-width: #{$screen-md-min}) {
-        width: 50%;
-    }
-
-    @media(max-width: #{$screen-sm-min}) {
-        width: 100%;
-    }
-}
-
-// .gallery-item-shell:first-child {
-//     margin-left: 0;
-// }
-
-// .gallery-item-shell:last-child {
-//     margin-right: 0;
-// }
-
-.gallery-item {
-    width: 100%;
-    position: relative;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.35);
+.down-arrow {
+    position: absolute;
+    bottom: 10%;
+    left: -10%;
+    transform: rotate(90deg);
+    padding: 20px;
     cursor: pointer;
-
-    @media(max-width: #{$screen-sm-min}) {
-        box-shadow: none;
-    }
 }
 
-.gallery-image-ratio-box {
-    height: 0;
-    padding-top: 150%;
-    position: relative;
-    z-index: 1;
+.down-arrow:hover svg {
+    animation-name: arrowBounce;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-delay: 0.1s;
+    animation-play-state: initial;
 }
 
-.gallery-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+.down-arrow svg g path {
+    animation: 2s arrowFill;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
 }
 
-.item-text {
-    background: linear-gradient(to top left, rgba(66, 51, 242, 0.75), rgba(114, 68, 167, 0.75));
-    color: rgba(255, 255, 255, 0.9);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: all 0.25s ease;
-
-    h3 {
-        margin: 0;
-        padding: 0 4px;
-        text-align: center;
-    }
-
-    .gallery-subtitle {
-        margin-top: 4px;
-        opacity: 0.75;
-    }
-
-    @media(max-width: #{$screen-sm-min}) {
-        position: static;
-        opacity: 1;
-        background: transparent;
-    }
-
-}
-
-.gallery-item:hover .item-text {
-    opacity: 1;
+html {
+    scroll-behavior: smooth;
 }

@@ -4,22 +4,23 @@ const modalImage = document.querySelector(".modal-content")
 const modalClose = document.querySelector(".modal-close")
 const bodyTag = document.querySelector('.js-body')
 
-    const loader = document.querySelector('.js-loader')
-    const main = document.querySelector('.js-main')
+const loader = document.querySelector('.js-loader')
+const main = document.querySelector('.js-main')
 
 galleryItems.forEach(image => {
-    image.addEventListener('click', function() {
-        modal.style.display = 'block'
-        event.preventDefault()
+    image.addEventListener('click', function(e) {
+        if (e.target.closest('.item-link')) {
+            return
+        } else {
+            modal.style.display = 'block'
 
-        let galleryItem = this.querySelector('.gallery-item')
-        let ratioBox = galleryItem.querySelector('.gallery-image-ratio-box')
-        let imgTag = ratioBox.querySelector('img')
-        imgSrc = imgTag.getAttribute('src')
+            let galleryItem = this.querySelector('.gallery-item')
+            let ratioBox = galleryItem.querySelector('.gallery-image-ratio-box')
+            let imgTag = ratioBox.querySelector('img')
+            imgSrc = imgTag.getAttribute('src')
 
-        console.log(imgSrc)
-
-        modalImage.innerHTML = `<img src="${imgSrc}" style="object-fit:cover; width:100%;">`
+            modalImage.innerHTML = `<img src="${imgSrc}" style="object-fit:cover; width:100%;">`
+        }
     })
 })
 

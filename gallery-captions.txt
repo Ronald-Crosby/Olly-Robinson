@@ -1,0 +1,11 @@
+Crap Travel -
+I took a deep dive into HTML tables to build a responsive scoreboard and I used % widths and heights to make the people scale as the screen size changes.
+
+Landtech -
+I built the About page for this site to a responsive grid using TailwindCSS and used Laravel Blade to componentise the sections for use across the site.
+
+LBA -
+This was a demo project in which I rebuilt the homepage of the LBA site that Parallax had just completed. I used Gulp build tooling and PostCSS on this project.
+
+Present & Correct -
+I rebuilt the homepage of one of my favourite online stores as a practice project. I used the dropdown menus as an opportunity to learn more about using JS for DOM manipulation.

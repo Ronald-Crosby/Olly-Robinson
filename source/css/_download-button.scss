@@ -1,0 +1,100 @@
+@keyframes buttonBorder {
+    0% { border-color: rgba(255, 255, 255, 0.9) }
+    100% { border-color: rgba(255, 255, 255, 0.4) }
+}
+
+.download-button {
+    display: block;
+    position: relative;
+    width: 45%;
+    text-align: center;
+    margin-left: auto;
+    background-color:rgba(255, 255, 255, 0);
+    border: 2px solid rgba(255, 255, 255, 1);
+    border-radius: 19px;
+    cursor: pointer;
+    color: #fff;
+    overflow: hidden;
+
+    @media(max-width: #{$screen-lg-min}) {
+        width: 45%;
+    }
+
+    @media(max-width:#{$screen-md-min}) {
+        width: 45%;
+        margin: 0 auto;
+    }
+
+    @media(max-width:#{$screen-sm-min}) {
+        width: 45%;
+    }
+}
+
+.download-button::before {
+    content: 'Download my CV';
+    position: absolute;
+    top: 29px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.download-button:hover::before {
+    top: 70px;
+    opacity: 0;
+}
+
+.download-button::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 50%;
+    transition: all 0.3s;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../img/Download_Icon_White.png');
+    opacity: 0;
+}
+
+.download-button:hover::after {
+    opacity: 1;
+    top: 28px;
+}
+
+.download-button:hover {
+    animation: 1s buttonBorder;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+    @media(max-width: #{$screen-md-min}) {
+        background-color:rgba(255, 255, 255, 0);
+        border: 1px solid rgba(255, 255, 255, 1);
+        color: #4233f2;
+    }
+}
+
+.email {
+    display: block;
+    margin-top: 15px;
+    padding: 15px 0;
+    color: rgba(255, 255, 255, 1);
+    transition: color 0.1s ease;
+    text-align: right;
+
+    @media(max-width:#{$screen-md-min}) {
+        text-align: center;
+        padding-top: 15px;
+    }
+}
+
+.email:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
