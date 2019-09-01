@@ -8,11 +8,13 @@ const autoprefixer = require('gulp-autoprefixer')
 const cleanCSS = require('gulp-clean-css')
 const sourcemaps = require('gulp-sourcemaps')
 const terser = require('gulp-terser')
+const tailwind = require('tailwindcss')
 const browserSync = require('browser-sync').create()
 
 function css() {
     return gulp.src('./source/css/input.scss')
         .pipe(sass())
+        .pipe(tailwind())
         .pipe(autoprefixer())
         .pipe(sourcemaps.init())
             .pipe(cleanCSS())
